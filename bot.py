@@ -20,9 +20,6 @@ async def on_message(message):
 
     print(f'Message {user_message} by {username} on {channel}')
 
-    if message.author == client.user:
-        return
-
     if channel == "random":
         if user_message.lower() == "hello" or user_message.lower() == "hi":
             await message.channel.send(f'Hello {username}')
